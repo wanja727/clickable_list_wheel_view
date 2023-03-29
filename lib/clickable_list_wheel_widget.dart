@@ -99,15 +99,15 @@ class _ClickableListWheelScrollViewState
     final indexOffset = (clickOffset / widget.itemHeight).round();
     final newIndex = currentIndex + indexOffset;
 
-    if (newIndex < 0 || newIndex >= widget.itemCount) {
-      return -1;
-    }
+    // if (newIndex < 0 || newIndex >= widget.itemCount) {
+    //   return -1;
+    // }
 
-    if (widget.loop) {
-      return newIndex % widget.itemCount;
-    } else {
+    // if (widget.loop) {
+    //   return newIndex % widget.itemCount;
+    // } else {
       return newIndex;
-    }
+    // }
   }
 
   Future<void> _onTap() async {
@@ -134,9 +134,9 @@ class _ClickableListWheelScrollViewState
   Future<void> _onFixedExtentScrollControllerTaped() async {
     final index = _getClickedIndex();
 
-    if (index < 0) {
-      return;
-    }
+    // if (index < 0) {
+    //   return;
+    // }
 
     widget.onItemTapCallback?.call(index);
 
